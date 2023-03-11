@@ -9,38 +9,26 @@ The primary goal of this file is to demonstrate a simple python program to class
 @author: rk
 """
 
-def classifyTriangle(a,b,c):
+def classify_triangle(val1,val2,val3):
     """
-    Your correct code goes here...  Fix the faulty logic below until the code passes all of 
-    you test cases. 
-    
-    This function returns a string with the type of triangle from three integer values
-    corresponding to the lengths of the three sides of the Triangle.
-    
-    return:
-        If all three sides are equal, return 'Equilateral'
-        If exactly one pair of sides are equal, return 'Isoceles'
-        If no pair of  sides are equal, return 'Scalene'
-        If not a valid triangle, then return 'NotATriangle'
-        If the sum of any two sides equals the squate of the third side, then return 'Right'
-      
-      BEWARE: there may be a bug or two in this code
+    Returns the sum of two numbers.
+    :param val1: The first number.
+    :param val2: The second number.
+    :param val3: The third number.
+    :return: result
     """
-
     # require that the input values be >= 0 and <= 200
-    if a <= 0 or b <= 0 or c <= 0:
+    if val1 <= 0 or val2 <= 0 or val3 <= 0:
         return 'InvalidInput'
-    elif a > 200 or b > 200 or c > 200:
+    if val1 > 200 or val2 > 200 or val3 > 200:
         return 'InvalidInput'
-    if (a >= (b + c)) or (b >= (a + c)) or (c >= (a + b)):
+    if (val1 >= (val2 + val3))or(val2 >= (val1 + val3))or(val3 >= (val1 + val2)):
         return 'NotATriangle'
-        
-    if a == b and b == c:
+    if val1 == val2 and val2 == val3:
         return 'Equilateral'
-    elif (a**2 + b**2 == c**2) or (a**2 + c**2 == b**2) or (b**2 + c**2 == a**2):
+    if (val1**2+val2**2==val3**2)or(val1**2+val3**2==val2**2)or(val2**2+val3**2==val1**2):
         return 'Right'
-    elif (a != b) and  (b != c) and (a != c):
+    if (val1 != val2) and  (val2 != val3) and (val1 != val3):
         return 'Scalene'
-    else:
-        return 'Isoceles'
-
+    return 'Isoceles'
+    
