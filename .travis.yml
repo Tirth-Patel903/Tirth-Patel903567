@@ -3,5 +3,11 @@ python:
  - "3.5"
 install:
   - python -m pip install --upgrade pip
+before_script:
+  - git clone https://github.com/Tirth-Patel903/Tirth-Patel903567
+  - cd your-repository
+  - git checkout your-branch-name
+env:
+  - PYTHONPATH=$PYTHONPATH: https://github.com/Tirth-Patel903/Tirth-Patel903567
 script:
   - python -m unittest TestTriangle
