@@ -5,8 +5,8 @@ install:
   - python -m pip install --upgrade pip
 before_script:
   - git clone https://github.com/Tirth-Patel903/Tirth-Patel903567
-  - cd your-repository
-  - git checkout your-branch-name
+  - cd Tirth-Patel903567
+  - git checkout main
 env:
   - PYTHONPATH=$PYTHONPATH: https://github.com/Tirth-Patel903/Tirth-Patel903567
 script:
