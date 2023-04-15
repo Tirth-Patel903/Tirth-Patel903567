@@ -10,4 +10,6 @@ before_script:
 env:
   - PYTHONPATH=$PYTHONPATH: https://github.com/Tirth-Patel903/Tirth-Patel903567
 script:
+  - ls
+  - export PYTHONPATH=$PYTHONPATH:$PW
   - python -m unittest TestTriangle
